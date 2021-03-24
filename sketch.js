@@ -271,7 +271,7 @@ function setup() {
   invisibleGround.visible = false;
 
   // Player 1
-  Player1 = createSprite(400, windowHeight-40, 50, 50);
+  Player1 = createSprite(400, windowHeight-40, 90, 90);
   Player1.addAnimation("win1",Player1_win);
   Player1.addAnimation("win1_still",Player1_win_still);
       // Left Side
@@ -506,7 +506,7 @@ function draw() {
 
   // Function for jumping of player 1
   if(keyDown("W") && Player1.y > invisibleGround.y-150) {
-    Player1.velocityY = -15;
+    Player1.velocityY = -6;
     if(Player1.x<Player2.x) {
       Player1.changeAnimation("jump_LS_1",Player1_LS_anim_jump);
     }else if(Player1.x>Player2.x) {
